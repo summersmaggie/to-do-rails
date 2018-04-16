@@ -1,0 +1,13 @@
+<div class="card" style="text-align:center;margin:10px;border:1px solid black;width:800px;margin:0 auto;">
+
+
+  <h1>Lists</h1>
+
+  <ul style="list-style:none;">
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "New List", new_list_path %>
+</div>
